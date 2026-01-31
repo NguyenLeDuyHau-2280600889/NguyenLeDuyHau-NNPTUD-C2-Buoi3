@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Table with Search, Sort, Pagination</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Data Table</h1>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search by title...">
+            <button id="search-btn"><img src="images/search.png" alt="Search"></button>
+        </div>
+        <table id="data-table">
+            <thead>
+                <tr>
+                    <th>Image</th>
+                    <th data-column="title">Title <img src="images/sort.png" alt="Sort" class="sort-icon"></th>
+                    <th data-column="price">Price <img src="images/sort.png" alt="Sort" class="sort-icon"></th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+                <!-- Data rows will be inserted here by JavaScript -->
+            </tbody>
+        </table>
+        <div class="pagination">
+            <button id="prev-btn"><img src="images/pagination.png" alt="Previous"></button>
+            <select id="items-per-page">
+                <option value="5">5</option>
+                <option value="10" selected>10</option>
+                <option value="20">20</option>
+            </select>
+            <span id="page-info">Page 1 of 1</span>
+            <button id="next-btn"><img src="images/pagination.png" alt="Next"></button>
+        </div>
+    </div>
+    <div id="tooltip" class="tooltip"><img src="images/hover-description.png" alt="Info"><span id="tooltip-text"></span></div>
+    <script src="script.js"></script>
+</body>
+</html>
